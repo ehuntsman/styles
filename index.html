@@ -1,185 +1,96 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
+<!DOCTYPE html>
+<html>
   <head>
+    <title>Wavetronix Core</title>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wavetronix Styles</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/app.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-
-    <script src="https://use.typekit.net/zjr7bnt.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+    <div id="page-container" class="page-container">
 
-    <div class="off-canvas-wrapper">
-      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <nav class="side-menu menu-effect mobile">
+        <ul>
+          <li><a href="#">Explore Solutions</a></li>
+          <li><a href="#">Get Support</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#"><i class="fa fa-search"></i></a></li>
+        </ul>
+      </nav>
 
+      <div class="page-slider">
+        <div class="page-content-case">
+          <div class="page-content">
 
-
-        <!-- header top-bar -->
-        <header data-sticky-container>
-            <!-- off-canvas -->
-            <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="medium">
-              <div class="title-bar-left">
-                <span class="title-bar-title"><img src="images/logo.svg"/></span>
-              </div>
-              <div class="title-bar-right">
-                <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
-              </div>
-            </div>
-            <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-              <ul class="vertical dropdown menu" data-dropdown-menu>
-                <li><a href="#"><i class="fa fa-search"></i></a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore Solutions</a></li>
-                <li><a href="#">Get Solutions</a></li>
-                <li><a href="#">Training</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
-              </ul>
-            </div>
-
-            <!-- desktop view -->
-            <div id="widemenu" class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+            <nav class="top-nav tablet">
               <div class="row">
-
-                <div class="top-bar-left">
                   <img src="images/logo.svg"/>
-                </div>
-                <div class="top-bar-right">
-                  <ul class="menu" data-dropdown-menu data-disable-hover="true" data-click-open="true">
-                    <li class="has-submenu">
-                      <a href="#" class="topbar-link">Explore Solutions</a>
-                      <ul class="topbar-dropdown" data-submenu>
+                  <div class="right">
+                    <ul class="tablet-nav">
+                      <li><a href="#">Explore Solutions</a></li>
+                      <li><a href="#">Get Support</a></li>
+                      <li><a href="#">Training</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                  </div>
+              </div>
+            </nav>
 
-                        <div class="tobar-dropdown-solutions">
-                            <div class="topbar-dropdown-subnav">
-                              <a href="#">Systems</a>
-                              <a href="#">Applications</a>
-                              <a href="#">Products</a>
-                            </div>
-                            <div class="topbar-dropdown-img">
-                              <img src="http://placehold.it/327x184">
-                            </div>
-                            <div class="topar-dropdown-text">
-                              <h4>Custom Engineered</h4>
-                              <p>“Our SmartSensors are designed and built specifically for traffic detection. We engineer our products to solve real world problems, and we work very hard until we get it right.”</p>
-                              <p>—Thomas Karlinsey<br/>
-                              Director of Engineering Development</p>
-                            </div>
-                        </div>
-
-                      </ul>
-                    </li>
-                    <li class="has-submenu">
-                      <a href="#" class="topbar-link">Get Support</a>
-                      <ul class="topbar-dropdown" data-submenu>
-                        <li>
-                          <div>
-                          </div>
-                        </li>
-                        <li>app....</li>
-                        <li>return....</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#" class="topbar-link">Training</a>
-                      <ul class="topbar-dropdown" data-submenu>
-                        <li>placeholder</li>
-                        <li>This will be click to open, not rollover</li>
-                      </ul>
-                    </li>
-                    <li class="has-submenu">
-                      <a href="#" class="topbar-link">Contact Us</a>
-                      <ul class="menu submenu vertical" data-submenu>
-                        <li>placeholder</li>
-                        <li>This will be click to open, not rollover</li>
-                      </ul>
-                    </li>
-                    <li class="has-submenu">
-                      <a href="#" class="topbar-link">About Us</a>
-                      <ul class="menu submenu vertical" data-submenu>
-                        <li>placeholder</li>
-                        <li>This will be click to open, not rollover</li>
-                      </ul>
-                    </li>
-                    <li><i class="fa fa-search" aria-hidden="true"></i></li>
-                  </ul>
-                </div>
-
+            <div class="top-nav mobile">
+              <img src="images/logo.svg"/>
+              <div id="trigger-menu-effect" class="hamburger">
+                <button data-effect="menu-effect">
+                  <span class="fa fa-bars mobile"></span>
+                </button>
               </div>
             </div>
 
+            <main class="individual-page-content">
+              <div class="home-video">
+                <img src="http://placehold.it/3000x750">
+              </div>
 
-      
-        <!--
-        <div class="cake" tabindex="1">
-          <a>cake 1</a>
-          <div>This is the content for cake 1</div>
-        </div>
-
-        <div class="cake" tabindex="1">
-          <a>cake 2</a>
-          <div>This is the content for cake 2</div>
-        </div>
-        -->
-
-        </header>
-
-        <!-- website -->
-        <div class="off-canvas-content" data-off-canvas-content>
-
-          <div class="home-video">
-            <img src="http://placehold.it/3000x750">
-          </div>
-
-          <section class="home-safe">
-            <div class="row">
-              <h1>Safe</h1>
-              <p>Smart traffic...</p>
-            </div>
-            <div>
-              <h1>this is a h1</h1>
-              <h2>This is h2, or a title, and you should be in klavika</h2>
-              <h3>This is h3, or a subhead</h3>
-              <h4>this is h4, or a blurb</h4>
-              <h5>this is h5, or a location</h5>
-              <p>paragragh tag here.I'm the coolest.</p>
-              <a href="#">I'm a link! Click me, bro!</a>
-              <p>Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...""There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl leo. Morbi nulla erat, iaculis ut enim quis, faucibus efficitur neque. Maecenas vel pellentesque magna. Praesent nisi mi, iaculis nec volutpat in, venenatis non quam. Proin faucibus purus non mauris molestie, molestie dignissim purus pellentesque. Integer sit amet orci consequat, vehicula nibh pulvinar, tincidunt ante. Aliquam accumsan, massa ac feugiat efficitur, sapien purus maximus ipsum, a viverra lorem lectus vel elit. Aliquam erat volutpat. Etiam gravida quis urna id imperdiet. Sed consequat tempor magna facilisis tincidunt. Maecenas at fermentum dui. Pellentesque et est vulputate, iaculis tortor at, tincidunt dolor. In convallis, nulla eu fringilla facilisis, metus felis volutpat tellus, a condimentum justo dui non lacus. Maecenas vestibulum at nibh non venenatis. Etiam lectus justo, tempor pulvinar ex a, efficitur cursus massa.</p>
-              <p>Nunc dapibus luctus magna, eu tristique leo rhoncus a. Nullam diam nunc, faucibus sed viverra ac, tincidunt eu nulla. Cras urna dui, accumsan a dui in, ornare varius nisl. Nullam lacinia luctus urna, eu vestibulum libero mollis id. Cras cursus, arcu sit amet pulvinar varius, dolor metus efficitur nulla, sit amet egestas dolor nibh a odio. Nunc et ultricies diam, eu congue lorem. In fringilla ultrices augue sed accumsan. Sed feugiat sagittis consectetur. Sed et dolor sit amet enim semper faucibus non sed felis. Maecenas in purus vehicula, convallis dolor non, facilisis dolor. Mauris convallis tellus sit amet felis accumsan, id scelerisque lacus eleifend. Quisque condimentum molestie massa, nec pulvinar ex pellentesque ac. Mauris condimentum, massa non tempus aliquam, mi tortor dictum sem, non cursus metus urna in nisi. Curabitur dolor sem, tristique in aliquam eu, rhoncus sed sapien. Proin lorem lorem, gravida a dictum at, ultrices non leo.</p>
-              <p>Nunc sed vehicula nisl, id sollicitudin neque. Nunc maximus feugiat mauris sit amet commodo. Praesent porttitor placerat consectetur. Mauris auctor gravida feugiat. Etiam sed risus velit. Nulla pretium mauris nec suscipit commodo. Nulla at euismod ante. Curabitur sodales erat lectus, vel egestas ipsum facilisis non. Etiam consequat urna quis elementum tempus. Etiam vitae mi purus. Integer venenatis finibus neque quis sodales. Vestibulum suscipit urna enim, eu euismod urna tincidunt eget. Fusce sollicitudin est vitae purus sollicitudin laoreet. Duis metus elit, dapibus eu purus vel, sagittis accumsan risus. Cras posuere lobortis dolor eu placerat. Fusce id est felis.</p>
-              <p>Phasellus laoreet tincidunt neque vel fringilla. Nunc turpis dolor, pellentesque vel vehicula sit amet, fermentum eu nulla. Donec suscipit ante nec dui dictum, et faucibus quam fermentum. Ut condimentum lorem accumsan, bibendum nisi eget, volutpat mauris. Aliquam erat volutpat. Cras vel venenatis enim, eget condimentum velit. Ut molestie venenatis neque, vel cursus ipsum blandit quis. Maecenas placerat nisl leo, vel egestas libero varius id. Ut laoreet tincidunt purus, non vehicula ipsum. Nunc non feugiat ex.</p>
-              <p>Nam ac eros tristique, cursus urna at, bibendum risus. Nullam congue mauris vel varius feugiat. Curabitur fringilla lacinia urna a pellentesque. Vestibulum condimentum cursus arcu vel vestibulum. Duis molestie mauris id mi suscipit sagittis. Pellentesque molestie vulputate molestie. Proin nec dui ac purus porta egestas. Praesent in felis porta, viverra turpis vitae, rutrum sem. Maecenas quis ligula eleifend, pretium urna non, fringilla mauris. Nullam pretium mattis malesuada. Morbi quis leo blandit, mollis urna eu, vulputate justo. Cras eget erat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur euismod, massa id ornare finibus, eros dolor tempor lectus, vel posuere est nisi at ipsum.</p>
+              <section class="home-safe">
+                <div class="row">
+                  <h1>Safe</h1>
+                  <p>Smart traffic...</p>
+                </div>
+                <div>
+                  <h1>this is a h1</h1>
+                  <h2>This is h2, or a title, and you should be in klavika</h2>
+                  <h3>This is h3, or a subhead</h3>
+                  <h4>this is h4, or a blurb</h4>
+                  <h5>this is h5, or a location</h5>
+                  <p>paragragh tag here.I'm the coolest.</p>
+                  <a href="#">I'm a link! Click me, bro!</a>
+                  <p>Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...""There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et nisl leo. Morbi nulla erat, iaculis ut enim quis, faucibus efficitur neque. Maecenas vel pellentesque magna. Praesent nisi mi, iaculis nec volutpat in, venenatis non quam. Proin faucibus purus non mauris molestie, molestie dignissim purus pellentesque. Integer sit amet orci consequat, vehicula nibh pulvinar, tincidunt ante. Aliquam accumsan, massa ac feugiat efficitur, sapien purus maximus ipsum, a viverra lorem lectus vel elit. Aliquam erat volutpat. Etiam gravida quis urna id imperdiet. Sed consequat tempor magna facilisis tincidunt. Maecenas at fermentum dui. Pellentesque et est vulputate, iaculis tortor at, tincidunt dolor. In convallis, nulla eu fringilla facilisis, metus felis volutpat tellus, a condimentum justo dui non lacus. Maecenas vestibulum at nibh non venenatis. Etiam lectus justo, tempor pulvinar ex a, efficitur cursus massa.</p>
+                  <p>Nunc dapibus luctus magna, eu tristique leo rhoncus a. Nullam diam nunc, faucibus sed viverra ac, tincidunt eu nulla. Cras urna dui, accumsan a dui in, ornare varius nisl. Nullam lacinia luctus urna, eu vestibulum libero mollis id. Cras cursus, arcu sit amet pulvinar varius, dolor metus efficitur nulla, sit amet egestas dolor nibh a odio. Nunc et ultricies diam, eu congue lorem. In fringilla ultrices augue sed accumsan. Sed feugiat sagittis consectetur. Sed et dolor sit amet enim semper faucibus non sed felis. Maecenas in purus vehicula, convallis dolor non, facilisis dolor. Mauris convallis tellus sit amet felis accumsan, id scelerisque lacus eleifend. Quisque condimentum molestie massa, nec pulvinar ex pellentesque ac. Mauris condimentum, massa non tempus aliquam, mi tortor dictum sem, non cursus metus urna in nisi. Curabitur dolor sem, tristique in aliquam eu, rhoncus sed sapien. Proin lorem lorem, gravida a dictum at, ultrices non leo.</p>
+                  <p>Nunc sed vehicula nisl, id sollicitudin neque. Nunc maximus feugiat mauris sit amet commodo. Praesent porttitor placerat consectetur. Mauris auctor gravida feugiat. Etiam sed risus velit. Nulla pretium mauris nec suscipit commodo. Nulla at euismod ante. Curabitur sodales erat lectus, vel egestas ipsum facilisis non. Etiam consequat urna quis elementum tempus. Etiam vitae mi purus. Integer venenatis finibus neque quis sodales. Vestibulum suscipit urna enim, eu euismod urna tincidunt eget. Fusce sollicitudin est vitae purus sollicitudin laoreet. Duis metus elit, dapibus eu purus vel, sagittis accumsan risus. Cras posuere lobortis dolor eu placerat. Fusce id est felis.</p>
+                  <p>Phasellus laoreet tincidunt neque vel fringilla. Nunc turpis dolor, pellentesque vel vehicula sit amet, fermentum eu nulla. Donec suscipit ante nec dui dictum, et faucibus quam fermentum. Ut condimentum lorem accumsan, bibendum nisi eget, volutpat mauris. Aliquam erat volutpat. Cras vel venenatis enim, eget condimentum velit. Ut molestie venenatis neque, vel cursus ipsum blandit quis. Maecenas placerat nisl leo, vel egestas libero varius id. Ut laoreet tincidunt purus, non vehicula ipsum. Nunc non feugiat ex.</p>
+                  <p>Nam ac eros tristique, cursus urna at, bibendum risus. Nullam congue mauris vel varius feugiat. Curabitur fringilla lacinia urna a pellentesque. Vestibulum condimentum cursus arcu vel vestibulum. Duis molestie mauris id mi suscipit sagittis. Pellentesque molestie vulputate molestie. Proin nec dui ac purus porta egestas. Praesent in felis porta, viverra turpis vitae, rutrum sem. Maecenas quis ligula eleifend, pretium urna non, fringilla mauris. Nullam pretium mattis malesuada. Morbi quis leo blandit, mollis urna eu, vulputate justo. Cras eget erat felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur euismod, massa id ornare finibus, eros dolor tempor lectus, vel posuere est nisi at ipsum.</p>
 
 
-            </div>
-          </section>
+                </div>
+              </section>
 
-          <footer>
-            <div class="row">
-              <small>&copy; 2016 Wavetronix, LLC<a href="#">About Wavetronix</a><a href="#">Blog</a><a href="#">Careers</a><a href="#">Legal</a><a href="#">United States</a></small>
-            </div>
-          </footer>
+              <footer>
+                <div class="row">
+                  <small>&copy; 2016 Wavetronix, LLC<a href="#">About Wavetronix</a><a href="#">Blog</a><a href="#">Careers</a><a href="#">Legal</a><a href="#">United States</a></small>
+                </div>
+              </footer>
+            </main>
 
-          <script src="js/vendor/jquery.js"></script>
-          <script src="js/vendor/what-input.js"></script>
-          <script src="js/vendor/foundation.js"></script>
-          <script src="js/app.js"></script>
-
-          <!-- close wrapper, no more content after this -->
-        </div>
-
-
-      </div>
-    </div>
-    <script src="js/app.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-
+          </div><!-- /page-content -->
+        </div><!-- /page-content-case -->
+      </div><!-- /page-slider -->
+    </div><!-- /st-container -->
+    <script src="js/app2.js"></script>
   </body>
 </html>
