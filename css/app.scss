@@ -1,0 +1,173 @@
+@import "scss/all";
+
+@mixin no-pad-marg {
+  padding: 0px;
+  margin: 0px;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+// colors
+$lt-gold: #F9E5B2;
+
+//top nav
+$top-nav-color: $oil;
+$nav-text-color: #c7c7c7;
+$top-nav-bar-height: 2.75em;
+$nav-text-hover: $white;
+$nav-background-hover: $black;
+$top-nav-button-text: $white;
+
+//side nav
+$side-nav-color: $oil;
+$side-nav-text: $ghost;
+$side-nav-width: 250px;
+
+// flex-box
+$flex-min-height: auto;
+$flex-min-width: auto;
+$flex-color: $oil;
+$flex-item-color: $lt-gold;
+$flex-margin: 10px;
+$flex-flow-fluid: row wrap;
+$flex-flow-solid: row no-wrap;
+$flex-justify-content: center;
+$flex-align: center;
+
+// flex-box column for a column centered layout
+$mid-column-width: 1000px;
+$mid-column-color: $white;
+
+html {
+  height: 100%;
+  font-size: 100%;
+  overflow: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 100%;
+  background: white;
+  color: $charcoal;
+  @include no-pad-marg;
+  font-family: $font-family-secondary;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 150%;
+  cursor: default;
+  overflow: auto;
+  width: 100%;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.flex-box {
+  padding: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  z-index: -1;
+}
+
+.fluid {
+  -webkit-flex-flow: $flex-flow-fluid;
+  flex-flow: $flex-flow-fluid;
+}
+
+.solid {
+  -webkit-flex-flow: $flex-flow-solid ;
+  flex-flow: $flex-flow-solid;
+}
+
+.flex-item {
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  margin: .25rem;
+  overflow: hidden;
+  text-align: center;
+  color: $flex-color;
+  margin: $flex-margin;
+  min-width: $flex-min-width;
+  height: $flex-min-height;
+}
+
+.fixed-width {
+  max-width: $mid-column-width;
+  background: $mid-column-color;
+  margin: auto;
+}
+
+@media only screen and (max-width: 44.4em) {
+  .mobile {
+    display: block;
+  }
+  .tablet {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 44.463em) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .desktop {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 44.4em) {
+  p {
+    font-size: 1.25em;
+  }
+}
+
+@media only screen and (min-width: 44.463em) {
+  p {
+    font-size: 1em;
+  }
+}

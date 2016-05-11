@@ -1,0 +1,173 @@
+@import "global";
+
+html,
+base {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  color: $black;
+}
+/**
+   * Address inconsistent and variable font size in all browsers.
+   */
+small {
+  font-size: 80%; }
+
+/**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+p {
+  font-size: $base-font-size;
+  font-family: $font-family-secondary;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+small {
+  font-size: 80%;
+  line-height: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  margin-top: 0;
+  @include no-pad-marg;
+  margin-bottom: 0.5rem;
+  line-height: 1.4; }
+  h1 small,
+  h2 small,
+  h3 small,
+  h4 small,
+  h5 small,
+  h6 small {
+    line-height: 0; }
+
+h1 {
+  font-size: 1.5rem; }
+
+//title
+h2 {
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  color: $oil;
+  font-family: $font-family-primary;
+}
+
+//subhead
+h3 {
+  font-size: $subhead-font-size;
+  line-height: $subhead-line-height;
+  color: $oil;
+  font-family: $font-family-primary;
+}
+
+//blurb
+h4 {
+  font-size: $blurb-font-size;
+  line-height: $blurb-line-height;
+  color: $charcoal;
+  font-family: $font-family-secondary;
+  font-weight: $blurb-font-weight;
+}
+
+//location
+h5 {
+  font-size: $location-font-size;
+  line-height: $location-line-height;
+  color: $tomato;
+  font-family: $font-family-secondary;
+  font-weight: $location-font-weight;
+}
+
+h6 {
+  font-size: 1rem; }
+
+@media screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem; }
+  h2 {
+    font-size: 2.5rem; }
+  h3 {
+    font-size: 1.9375rem; }
+  h4 {
+    font-size: 1.5625rem; }
+  h5 {
+    font-size: 1.25rem; }
+  h6 {
+    font-size: 1rem; } }
+
+a {
+  color: $fadedblue;
+  text-decoration: none;
+  font-size: $link-font-size;
+  line-height: $link-line-height;
+  cursor: pointer;
+  font-family: $font-family-secondary;
+  font-weight: $link-font-weight;
+}
+  a:hover, a:focus {
+    //color: #258faf;
+    outline: none;
+    border: 0;
+  }
+  a img {
+    border: 0; }
+
+/**
+   * Remove the gray background color from active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * Improve readability of focused elements when they are also in an
+   * active/hover state.
+   */
+a:active,
+a:hover {
+  outline: 0; }
+
+hr {
+  max-width: 62.5rem;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #cacaca;
+  border-left: 0;
+  margin: 1.25rem auto;
+  clear: both;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+ul {
+  list-style-type: none;
+  @include no-pad-marg;
+}

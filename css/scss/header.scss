@@ -1,0 +1,269 @@
+@import "global";
+
+/***********************************************************************************************
+Title and Top Bar
+***********************************************************************************************/
+
+$header-height: 52px;
+
+#trigger-menu-effect {
+  display: inline-block;
+}
+
+.hamburger {
+  float: right;
+  padding-right: 0.5em;
+  button {
+    border: none;
+    outline: none;
+  }
+}
+
+@each $class in (page-content-case, page-content, page-container, page-slider) {
+  .#{$class} {
+    position: relative;
+    @include border-box;
+    height: 100%;
+  }
+}
+
+.page-content-case {
+  overflow-y: scroll;
+  background: $white;
+}
+
+.page-container {
+  overflow: hidden;
+}
+
+.page-slider {
+  left: 0px;
+  z-index: 99;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  &::after {
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    background: rgba(0,0,0,0.3);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    @include border-box;
+  }
+}
+
+.side-menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  visibility: hidden;
+  width: $side-nav-width;
+  height: 100%;
+  background: $side-nav-color;
+  color: $side-nav-text;
+  @include transition(all 0.5s);
+  @include border-box;
+  &::after {
+    position: absolute;
+    width: 100%;
+    content: '';
+    opacity: 1;
+    @include transition(opacity 0.5s);
+    @include border-box;
+  }
+  a {
+    display: block;
+    padding: 1em 1em 1em 1.2em;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: $silver;
+    font-weight: $base-font-weight;
+    &:hover {
+      background: rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.side-menu-open {
+  .page-slider::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    @include transition(opacity 0.5s);
+  }
+ .side-menu::after {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  }
+}
+
+.menu-effect.side-menu-open .page-slider {
+  @include transform(translate3d($side-nav-width, 0, 0));
+}
+
+.menu-effect.side-menu {
+  z-index: 1;
+  @include transform(translate3d(-50%, 0, 0));
+  &::after {
+    display: none;
+  }
+}
+
+.menu-effect.side-menu-open .menu-effect.side-menu {
+  visibility: visible;
+  @include transition(transform 0.5s);
+  @include transform(translate3d(0, 0, 0));
+}
+
+
+.top-nav {
+  @include no-pad-marg;
+  background: $black;
+  height: $header-height;
+  line-height: $header-height;
+  position: relative;
+  z-index: 1;
+  button {
+    background: none;
+    color: $nav-text-color;
+    float: right;
+    height: $header-height;
+  }
+}
+
+.tablet-nav {
+  display: inline-block;
+  @include transition(background-color 0.2s ease-out);
+  @include no-pad-marg;
+  li {
+    display: inline-block;
+    position: relative;
+    padding: 0em 1em;
+    &:hover {
+      background: $nav-background-hover;
+    }
+  }
+  a {
+    color: $nav-text-color;
+    display: inline-block;
+    font-weight: $base-font-weight;
+    &:hover {
+      color: $nav-text-hover;
+    }
+  }
+}
+
+.search-box {
+  margin-right: 1em;
+}
+
+.top-logo {
+  @include no-pad-marg;
+  width: 10.6em;
+  height: 2.75em;
+  background-image: image-url("wavetronix_white.svg");
+  background-repeat: no-repeat;
+  @include transition(background-color 0.2s ease-out);
+  display: inline-block;
+  &:hover {
+    background-color: $nav-background-hover;
+  }
+}
+
+.top-bar .dropdown {
+  background: transparent;
+}
+
+.top-bar {
+  background: $black;
+  padding: 0.5rem; }
+  .top-bar::before, .top-bar::after {
+    content: ' ';
+    display: table; }
+  .top-bar::after {
+    clear: both; }
+  .top-bar,
+  .top-bar ul {
+    background-color: $black;
+    color: $silver;
+    width: 100%; } /////////////////////////this is the dropdown menu
+  .top-bar input {
+    max-width: 200px;
+    margin-right: 1rem; }
+  .top-bar .input-group-field {
+    width: 100%;
+    margin-right: 0; }
+  .top-bar input.button {
+    width: auto; }
+  .top-bar .top-bar-left,
+  .top-bar .top-bar-right {
+    width: 100%; }
+  @media screen and (min-width: 40em) {
+    .top-bar .top-bar-left,
+    .top-bar .top-bar-right {
+      width: auto; } }
+  @media screen and (max-width: 63.9375em) {
+    .top-bar.stacked-for-medium .top-bar-left,
+    .top-bar.stacked-for-medium .top-bar-right {
+      width: 100%; } }
+  @media screen and (max-width: 74.9375em) {
+    .top-bar.stacked-for-large .top-bar-left,
+    .top-bar.stacked-for-large .top-bar-right {
+      width: 100%; } }
+  .top-bar-title {
+  float: left; }
+
+/***********************************************************************************************
+Solutions Subnav
+***********************************************************************************************/
+
+$solutions-nav-height: 21em;
+
+.solutions-nav {
+  background-color: $charcoal;
+  height: $solutions-nav-height;
+  width: 100%;
+  z-index: -1;
+  margin-top: -$solutions-nav-height;
+  -webkit-transition: 1s;
+  color: $white;
+  padding-top: 10px;
+  visibility: hidden;
+  opacity: 0;
+  h4 {
+    color: $white;
+  }
+  a {
+    color: $silver;
+    font-weight: $base-font-weight;
+  }
+}
+
+.transform {
+  -webkit-transition: all 1s ease;  
+  -moz-transition: all 1s ease;  
+  -o-transition: all 1s ease;  
+  -ms-transition: all 1s ease;  
+  transition: all 1s ease;
+}
+
+.transform-active {
+  height: $solutions-nav-height;
+  transform: translate3d(75,75,5);
+  margin-top: 0px;
+  visibility: visible;
+  opacity: 1;
+  .cake{
+    display: block;
+  }
+}
+
+.quoter {
+  text-align: right;
+}
