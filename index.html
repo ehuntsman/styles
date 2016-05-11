@@ -1,3 +1,12 @@
+<!--
+
+This works great in every browser but firefox
+
+-->
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,10 +14,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#solutions-nav").click(function(e) {
+          $(".transform").toggleClass("transform-active");
+          e.stopPropagation();
+        });
+        $(document).click(function() {
+          $(".transform").removeClass("transform-active");
+        })
+      });
+    </script>
   </head>
   <body>
+    <!-- slide-menu -->
     <div id="page-container" class="page-container">
 
       <nav class="side-menu menu-effect mobile">
@@ -25,14 +49,23 @@
       <div class="page-slider">
         <div class="page-content-case">
           <div class="page-content">
+            <nav class="top-nav mobile">
+              <img src="images/logo.svg" alt="Wavetronix"/>
+              <div id="trigger-menu-effect" class="hamburger">
+                <button data-effect="menu-effect">
+                  <span class="fa fa-bars mobile"></span>
+                </button>
+              </div>
+            </nav>
+          <!-- slide-menu temp end -->
 
             <nav class="top-nav tablet">
               <div class="row">
-                  <img src="images/logo.svg"/>
+                  <img src="images/logo.svg" alt="Wavetronix"/>
                   <div class="right">
                     <ul class="tablet-nav">
-                      <li><a href="#">Explore Solutions</a></li>
-                      <li><a href="#">Get Support</a></li>
+                      <li><a href="#" id="solutions-nav">Explore Solutions</a></li>
+                      <li><a href="#" has-dropdown acive-line data-drop="#support-dropdown" data-show="false">Get Support</a></li>
                       <li><a href="#">Training</a></li>
                       <li><a href="#">Contact Us</a></li>
                       <li><a href="#">About Us</a></li>
@@ -42,19 +75,33 @@
               </div>
             </nav>
 
-            <div class="top-nav mobile">
-              <img src="images/logo.svg"/>
-              <div id="trigger-menu-effect" class="hamburger">
-                <button data-effect="menu-effect">
-                  <span class="fa fa-bars mobile"></span>
-                </button>
+            <!-- hidden sub navigation -->
+            <section class="solutions-nav transform">
+              <div class="row cake">
+                <div class="medium-2 columns">
+                  <p><a href="#">Systems</a></p>
+                  <p><a href="#">Applications</a></p>
+                  <p><a href="#">Products</a></p>
+                </div>
+                <div class="large-4 medium-6 columns">
+                  <img src="http://placehold.it/327x184" alt="placeholder">
+                </div>
+                <div class="large-6 medium-4 columns">
+                  <h4>Custom Engineered</h4>
+                  <p>“Our SmartSensors are designed and built specifically for traffic detection. We engineer our products to solve real world problems, and we work very hard until we get it right.”</p>
+                  <p class="quoter">—Thomas Karlinsey<br/>
+                  Director of Engineering Development</p>
+                </div>
               </div>
-            </div>
+            </section>
+
 
             <main class="individual-page-content">
               <div class="home-video">
                 <img src="http://placehold.it/3000x750">
               </div>
+
+
 
               <section class="home-safe">
                 <div class="row">
@@ -87,10 +134,11 @@
               </footer>
             </main>
 
+            <!-- slide-menu resume! -->
           </div><!-- /page-content -->
         </div><!-- /page-content-case -->
       </div><!-- /page-slider -->
     </div><!-- /st-container -->
-    <script src="js/app2.js"></script>
+    <script src="js/app2.js" type="text/javascript"></script>
   </body>
 </html>
